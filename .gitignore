@@ -160,3 +160,8 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+other_model_comparisons_2025/
+Resources/fg_depth_charts.py
+testing_and_adding_stats_to_db/
+stuff plus model/
