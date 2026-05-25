@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="470" viewBox="0 0 980 470" role="img" aria-labelledby="title desc">
+  <title id="title">2025 Veteran Split Weighted RMSE Bar Chart</title>
+  <desc id="desc">Horizontal bar chart of veteran weighted RMSE. Lower is better. XGBoost Hitter Projections is highlighted in first place.</desc>
+  <rect width="980" height="470" fill="#ffffff"/>
+  <text x="40" y="42" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">2025 Veteran Split - Weighted RMSE</text>
+  <text x="40" y="68" fill="#4b5563" font-family="Segoe UI, Arial, sans-serif" font-size="14">565 veteran players evaluated. Lower is better. Tom's model is highlighted.</text>
+
+  <g stroke="#e5e7eb" stroke-width="1">
+    <line x1="300" y1="92" x2="300" y2="398"/>
+    <line x1="440" y1="92" x2="440" y2="398"/>
+    <line x1="580" y1="92" x2="580" y2="398"/>
+    <line x1="720" y1="92" x2="720" y2="398"/>
+    <line x1="860" y1="92" x2="860" y2="398"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#111827">
+    <text x="40" y="119" font-weight="700">XGBoost Hitter Projections</text>
+    <rect x="300" y="102" width="469" height="24" fill="#60a5fa"/>
+    <text x="784" y="120" font-weight="700">0.033469</text>
+
+    <text x="40" y="159">THE BAT X</text>
+    <rect x="300" y="142" width="470" height="24" fill="#9ca3af"/>
+    <text x="785" y="160">0.033572</text>
+
+    <text x="40" y="199">Steamer</text>
+    <rect x="300" y="182" width="470" height="24" fill="#9ca3af"/>
+    <text x="785" y="200">0.033583</text>
+
+    <text x="40" y="239">ATC</text>
+    <rect x="300" y="222" width="471" height="24" fill="#9ca3af"/>
+    <text x="786" y="240">0.033614</text>
+
+    <text x="40" y="279">ZiPS</text>
+    <rect x="300" y="262" width="471" height="24" fill="#9ca3af"/>
+    <text x="786" y="280">0.033642</text>
+
+    <text x="40" y="319">OOPSY</text>
+    <rect x="300" y="302" width="471" height="24" fill="#9ca3af"/>
+    <text x="786" y="320">0.033660</text>
+
+    <text x="40" y="359">Naive</text>
+    <rect x="300" y="342" width="577" height="24" fill="#d1d5db"/>
+    <text x="892" y="360">0.041211</text>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#6b7280">
+    <text x="294" y="420">0.000</text>
+    <text x="432" y="420">0.010</text>
+    <text x="572" y="420">0.020</text>
+    <text x="712" y="420">0.030</text>
+    <text x="852" y="420">0.040</text>
+  </g>
+</svg>
