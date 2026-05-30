@@ -36,8 +36,6 @@ Sorted by projected wOBA.
 
 ![Top 10 projected 2026 hitters by xgb_wOBA](docs/assets/top10_hitters_woba.svg)
 
-Summary: Aaron Judge leads the model's 2026 hitter board at `0.432` projected `xgb_wOBA`, followed by Shohei Ohtani and Kyle Schwarber.
-
 ## How The Hitter Model Works
 
 This model projects `HR`, `1B`, `2B`, `3B`, `BB`, `IBB`, `SF`, `SH`, `HBP`, and `SO` individually then combines them into a WOBA projection. Each stat is projected as a rate, so for example home runs would be measured as home runs per plate appearance. 
@@ -47,14 +45,6 @@ This model projects `HR`, `1B`, `2B`, `3B`, `BB`, `IBB`, `SF`, `SH`, `HBP`, and 
 3. The main difference in my model compared to others is that I split players by recent playing time. I found that using the Marcel baseline was less effective for players who had little playing time. This is because Marcel uses only past performance in home runs to project home runs and that is volatile in small samples. My model uses other power stats to project home runs and so stabalizes faster than Marcel. I found that if a player had a lot of playing time starting from the Marcel baseline did improve the model. Therefore, I split my projections into two models. For players over 950 plate appearances in their last three seasons I used the Marcel baseline as a feature in my regression model. For players under 950 plate appearances in the last three years it was not included. 
 
 The model does not directly predict wOBA as one black-box target. It predicts the events that create wOBA, which makes the output easier to inspect and gives the projection file more useful downstream columns.
-
-### Home Run Feature Importance
-
-These charts show the top ten features by XGBoost gain for the home run component model, split by historical playing time.
-
-![Large playing-time home run feature importance](docs/assets/hr_feature_importance_large_playing_time.svg)
-
-![Small playing-time home run feature importance](docs/assets/hr_feature_importance_small_playing_time.svg)
 
 ## How Evaluation Works
 
