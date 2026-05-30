@@ -45,13 +45,14 @@
     <rect x="300" y="302" width="428" height="12" fill="#60a5fa"/>
     <rect x="300" y="318" width="426" height="12" fill="#9ca3af"/>
     <text x="744" y="327">392 players</text>
+
   </g>
 
   <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#6b7280">
-    <text x="294" y="382">0.000</text>
-    <text x="432" y="382">0.010</text>
-    <text x="572" y="382">0.020</text>
-    <text x="712" y="382">0.030</text>
-    <text x="852" y="382">0.040</text>
+    <text x="294" y="382" text-anchor="start">0.000</text>
+    <text x="434" y="382" text-anchor="start">0.010</text>
+    <text x="574" y="382" text-anchor="start">0.020</text>
+    <text x="714" y="382" text-anchor="start">0.030</text>
+    <text x="854" y="382" text-anchor="start">0.040</text>
   </g>
 </svg>

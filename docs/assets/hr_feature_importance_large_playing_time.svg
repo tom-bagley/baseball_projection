@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">Large Playing-Time HR Model</title>
+  <desc id="desc">Horizontal bar chart showing the top ten XGBoost gain importances for the home run model.</desc>
+  <rect width="980" height="560" fill="#ffffff"/>
+  <text x="40" y="42" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Large Playing-Time HR Model</text>
+  <text x="40" y="68" fill="#4b5563" font-family="Segoe UI, Arial, sans-serif" font-size="14">Hitters with at least 950 prior PA; bars normalize to the top feature, labels show share of top-10 gain.</text>
+  <g stroke="#e5e7eb" stroke-width="1">
+    <line x1="420" y1="92" x2="420" y2="490"/>
+    <line x1="580" y1="92" x2="580" y2="490"/>
+    <line x1="740" y1="92" x2="740" y2="490"/>
+    <line x1="900" y1="92" x2="900" y2="490"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#111827">
+    <text x="40" y="121">Marcel HR rate</text>
+    <rect x="260" y="104" width="640" height="22" fill="#34d399"/>
+    <text x="912" y="121" fill="#374151">29.0%</text>
+
+    <text x="40" y="161">Prev Barrel%</text>
+    <rect x="260" y="144" width="508" height="22" fill="#34d399"/>
+    <text x="780" y="161" fill="#374151">23.0%</text>
+
+    <text x="40" y="201">Prev EV</text>
+    <rect x="260" y="184" width="168" height="22" fill="#34d399"/>
+    <text x="440" y="201" fill="#374151">7.6%</text>
+
+    <text x="40" y="241">Prev ISO</text>
+    <rect x="260" y="224" width="165" height="22" fill="#34d399"/>
+    <text x="437" y="241" fill="#374151">7.4%</text>
+
+    <text x="40" y="281">Prev HardHit%</text>
+    <rect x="260" y="264" width="139" height="22" fill="#34d399"/>
+    <text x="411" y="281" fill="#374151">6.3%</text>
+
+    <text x="40" y="321">Prev xSLG</text>
+    <rect x="260" y="304" width="125" height="22" fill="#34d399"/>
+    <text x="397" y="321" fill="#374151">5.6%</text>
+
+    <text x="40" y="361">Prev Med%</text>
+    <rect x="260" y="344" width="121" height="22" fill="#34d399"/>
+    <text x="393" y="361" fill="#374151">5.5%</text>
+
+    <text x="40" y="401">Prev xwOBA</text>
+    <rect x="260" y="384" width="118" height="22" fill="#34d399"/>
+    <text x="390" y="401" fill="#374151">5.3%</text>
+
+    <text x="40" y="441">Prev FB%</text>
+    <rect x="260" y="424" width="115" height="22" fill="#34d399"/>
+    <text x="387" y="441" fill="#374151">5.2%</text>
+
+    <text x="40" y="481">Prev Zone%</text>
+    <rect x="260" y="464" width="110" height="22" fill="#34d399"/>
+    <text x="382" y="481" fill="#374151">5.0%</text>
+
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#6b7280">
+    <text x="254" y="516" text-anchor="end">0</text>
+    <text x="420" y="516" text-anchor="middle">25%</text>
+    <text x="580" y="516" text-anchor="middle">50%</text>
+    <text x="740" y="516" text-anchor="middle">75%</text>
+    <text x="900" y="516" text-anchor="middle">100%</text>
+  </g>
+</svg>

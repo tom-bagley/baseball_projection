@@ -267,18 +267,6 @@ def build_model_frame():
 
 
 # Train one XGBoost model per component
-def get_component_features(stat, base_features, include_marcel):
-    model_features = list(base_features)
-    if stat == "BB":
-        model_features = [feature for feature in model_features if feature != "1Prev_BB%"]
-        include_marcel = True
-
-    if include_marcel:
-        model_features.append(f"marcel_{stat}_proj_rate")
-
-    return model_features
-
-
 def train_and_project(df):
     rf_features = [f"1Prev_{feature}" for feature in features] + ["Age"]
     train = df[df["Season"] < PROJECT_SEASON].copy()
@@ -289,11 +277,10 @@ def train_and_project(df):
         valid = train.dropna(subset=[stat]).copy()
 
         lo_train = valid[valid["hist_pa"] < PA_SPLIT]
-        lo_features = get_component_features(stat, rf_features, include_marcel=False)
         model_lo = XGBRegressor(**BEST_PARAMS[stat], random_state=42, verbosity=0)
-        model_lo.fit(lo_train[lo_features].fillna(0).infer_objects(copy=False), lo_train[stat])
+        model_lo.fit(lo_train[rf_features].fillna(0).infer_objects(copy=False), lo_train[stat])
 
-        hi_features = get_component_features(stat, rf_features, include_marcel=True)
+        hi_features = rf_features + [f"marcel_{stat}_proj_rate"]
         hi_train = valid[valid["hist_pa"] >= PA_SPLIT]
         model_hi = XGBRegressor(**BEST_PARAMS[stat], random_state=42, verbosity=0)
         model_hi.fit(hi_train[hi_features].fillna(0).infer_objects(copy=False), hi_train[stat])
@@ -303,7 +290,7 @@ def train_and_project(df):
 
         if len(lo_idx):
             rows.loc[lo_idx, f"xgb_proj_{stat}"] = model_lo.predict(
-                rows.loc[lo_idx, lo_features].fillna(0).infer_objects(copy=False)
+                rows.loc[lo_idx, rf_features].fillna(0).infer_objects(copy=False)
             )
         if len(hi_idx):
             rows.loc[hi_idx, f"xgb_proj_{stat}"] = model_hi.predict(
