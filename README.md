@@ -48,6 +48,14 @@ This model projects `HR`, `1B`, `2B`, `3B`, `BB`, `IBB`, `SF`, `SH`, `HBP`, and 
 
 The model does not directly predict wOBA as one black-box target. It predicts the events that create wOBA, which makes the output easier to inspect and gives the projection file more useful downstream columns.
 
+### Home Run Feature Importance
+
+These charts show the top ten features by XGBoost gain for the home run component model, split by historical playing time.
+
+![Large playing-time home run feature importance](docs/assets/hr_feature_importance_large_playing_time.svg)
+
+![Small playing-time home run feature importance](docs/assets/hr_feature_importance_small_playing_time.svg)
+
 ## How Evaluation Works
 
 The evaluation is built to compare projection systems directly using wOBA as the measurement. In order to create the most fair possible comparison:
